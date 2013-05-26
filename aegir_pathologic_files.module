@@ -1,0 +1,15 @@
+<?php
+
+/*
+ * Implements hook_pathologic_alter()
+ */
+function aegir_pathologic_files_pathologic_alter(&$url_params, $parts, $settings) {
+
+  $pattern = '~sites/.*/files/~';
+  $replace = 'files/';
+
+  if (preg_match($pattern, $url_params['path'])) {
+    $url_params['path'] = preg_replace($pattern, $replace, $url_params['path']);
+  }
+
+}
