@@ -1,5 +1,5 @@
 name = Aegir Pathologic Files
 package = "Input filters"
 dependencies[] = pathologic
-description = Simplify paths to files directory in content. Helps prevent broken images when site directory name changes. Requires /files to be aliased to /sites/exmaple.com/files, which Aegir does by default.
+description = Simplify file paths in content to help prevent broken images when the site directory name changes. Requires an apache rewrite rule to point /files to /sites/example.com/files, which Aegir provides by default.
 core = 7.x
